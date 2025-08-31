@@ -3,7 +3,8 @@ import React, { useEffect, useState, useCallback, useRef } from "react";
 import { Virtuoso } from "react-virtuoso";
 import './App.css';
 
-const API = "http://localhost:4000";
+// API configuration - supports different environments
+const API = process.env.REACT_APP_API_URL || "http://localhost:4000";
 
 export default function App() {
   const [tabs, setTabs] = useState([]);
