@@ -16,3 +16,8 @@ services:
         sync: false
     healthCheckPath: /health
     autoDeploy: true
+    buildFilter:
+      paths:
+        - server/**
+        - package.json
+        - render.yaml
