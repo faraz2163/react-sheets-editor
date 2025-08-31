@@ -4,7 +4,7 @@ import { Virtuoso } from "react-virtuoso";
 import './App.css';
 
 // API configuration - supports different environments
-const API = process.env.REACT_APP_API_URL || "http://localhost:4000";
+const API = process.env.REACT_APP_API_URL || "https://react-sheets-editor.onrender.com";
 
 export default function App() {
   const [tabs, setTabs] = useState([]);
