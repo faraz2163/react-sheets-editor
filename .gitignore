@@ -24,6 +24,7 @@ dist-ssr
 *.sw?
 
 
+server/service_account.json
 server/service-account.json
 server/node_modules
 server/.env

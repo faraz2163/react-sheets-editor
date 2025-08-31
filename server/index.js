@@ -33,16 +33,16 @@ try {
       scopes: ["https://www.googleapis.com/auth/spreadsheets"],
     });
   } else {
-    // Fallback to local service-account.json file
-    const serviceAccountPath = path.join(__dirname, "service-account.json");
+    // Fallback to local service_account.json file
+    const serviceAccountPath = path.join(__dirname, "service_account.json");
     if (fs.existsSync(serviceAccountPath)) {
-      console.log("🔐 Using Google Sheets credentials from service-account.json file");
+      console.log("🔐 Using Google Sheets credentials from service_account.json file");
       auth = new google.auth.GoogleAuth({
         keyFile: serviceAccountPath,
         scopes: ["https://www.googleapis.com/auth/spreadsheets"],
       });
     } else {
-      throw new Error("No Google Sheets credentials found. Please set GOOGLE_SHEETS_CREDENTIALS environment variable or provide service-account.json file.");
+      throw new Error("No Google Sheets credentials found. Please set GOOGLE_SHEETS_CREDENTIALS environment variable or provide service_account.json file.");
     }
   }
 } catch (error) {
